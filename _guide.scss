@@ -1,0 +1,411 @@
+/*****************************************************************************
+
+    UI Visual Guides in Confluence
+
+    Helpers
+    https://c.zoosk.com/confluence/x/3CKu
+
+    Shortcuts
+    https://c.zoosk.com/confluence/x/1SKu
+
+    Utilities
+    https://c.zoosk.com/confluence/x/TCKu
+
+    SVG files (Zephyr)
+    https://c.zoosk.com/confluence/x/kCKu
+
+    SVG templates (Trove)
+    https://c.zoosk.com/confluence/x/NiOu
+
+    SVG templates (Touch)
+    https://c.zoosk.com/confluence/x/PSOu
+
+*****************************************************************************/
+
+/*****************************************************************************
+    Overrides/styles for the guide itself
+*****************************************************************************/
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.4em;
+}
+
+.guide {
+    > div {
+        margin-top: 40px;
+    }
+
+    a, button, div, footer, h1, h2, h3, h4, h5, h6, header, input, legend, li, nav, ol, section, select, span, textarea, ul {
+        box-sizing: border-box;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    h2 {
+        border-top: 3px solid #5d6265;
+        font-weight: bold;
+        margin-top: 60px;
+        padding-top: 30px;
+    }
+
+    select, .z-datepicker {
+        @include rounded-corners;
+        background-image: image-url('touch/icons/select-arrow-2x.png'), -webkit-linear-gradient(#FFF, #FFF 30%, #E5E5E5);
+        background-image: image-url('touch/icons/select-arrow-2x.png'), linear-gradient(#FFF, #FFF 30%, #E5E5E5);
+        background-position: right 0.4em center, top left;
+        background-repeat: no-repeat, repeat-x;
+        -webkit-background-size: 13px 7px, 100%;
+        background-size: 13px 7px, 100%;
+        border: 1px solid #bbb;
+        margin: 0;
+        -webkit-appearance: button;
+        // hide select arrow in ff
+        -moz-appearance: none;
+        text-indent: 0.01px;
+        text-overflow: '';
+
+        white-space: nowrap;
+        padding: .4em 25px .4em .4em;
+        line-height: 1.5; // improve text rendering in newer Androids, makes less of descenders cut off
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.guide__0-min-height {
+    min-height: 0;
+}
+
+.guide__100-min-height {
+    min-height: 100px;
+}
+
+.guide__500-max-width {
+    max-width: 500px;
+}
+
+.guide__2px-border {
+    border: 2px solid $primary-link-color;
+}
+
+.guide__children-padding {
+    > * {
+        padding: 20px;
+    }
+}
+
+.guide__bg1 {
+    background: rgba($primary-link-color, .3);
+}
+
+.guide__bg2 {
+    background: rgba($primary-link-color, .5);
+}
+
+.guide__description {
+    border-left: 5px solid #bfbfbf;
+    font-size: 15px;
+    line-height: 1.3;
+    padding-left: 15px;
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.guide__flex-display {
+    display: flex;
+}
+
+.guide__floater {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    width: 200px;
+}
+
+.guide__font-large {
+    font-size: 28px;
+}
+
+.guide__general-parent {
+    background: #bfbfbf;
+    width: 400px;
+}
+
+.guide__half-width {
+    width: 50%;
+}
+
+.guide__left-0 {
+    left: 0;
+}
+
+.guide__one-third-width {
+    width: 33%;
+}
+
+.guide__padding {
+    padding: 20px;
+}
+
+.guide__relative {
+    position: relative;
+}
+
+.guide__square {
+    background: $primary-link-color;
+    height: 30px;
+    width: 30px;
+}
+
+.guide__u-flex-item-2 {
+     flex: 2;
+}
+
+.guide__visual-parent {
+    border: 1px solid #999;
+    font-size: 12px;
+    min-height: 80px;
+}
+
+
+/*****************************************************************************
+    Helper styles on real pattern classes to help with the guide only
+*****************************************************************************/
+// Utilities
+.floating-icon-with-text, .text-with-graphic {
+    padding-left: 50px;
+}
+
+.floating-pseudo-icon-with-text {
+    padding-right: 160px;
+
+    &:before {
+        background: image-url("global/invite-landing-logo-white.png") no-repeat 50% 50%;
+        background-color: $primary-link-color; // Separated for Confluence
+        height: 46px;
+        width: 130px;
+        right: 0;
+    }
+}
+
+.u-tap-target:after {
+    background: rgba($primary-link-color, .5)
+}
+
+// Shortcuts
+.icon-gift-sent {
+    display: block;
+    margin-bottom: 1.8rem;
+    font-size: 2.6rem;
+    text-align: center;
+}
+
+
+/*****************************************************************************
+    Classes created only so we have something to attach the Shortcut mixins to.
+    There are no official classes that call these mixins.
+*****************************************************************************/
+.guide__alt-emphasized-header {
+    @include alt-emphasized-header($smartpick-red, 500);
+}
+
+.guide__background-contain {
+    @include background-contain('homepage/zoosk-hero-min.jpg');
+    height: 300px;
+    width: 300px;
+}
+
+.guide__background-cover {
+    @include background-cover('homepage/zoosk-hero-min.jpg');
+    height: 300px;
+    width: 300px;
+}
+
+.guide__block-children {
+    @include block-children;
+}
+
+.guide__blur {
+    @include blur(5px);
+}
+
+.guide__columns {
+    @include columns(4);
+}
+
+.guide__confirmation-popup {
+    @include confirmation-popup;
+}
+
+.guide__contrasted-text {
+    @include contrasted-text;
+}
+
+.guide__defined-box {
+    @include defined-box($silver, 3px, $black, 10px);
+}
+
+.guide__direct-children-spacing--margin-top {
+    @include direct-children-spacing(margin-top, 30px);
+}
+
+.guide__direct-children-spacing--padding-left {
+    @include direct-children-spacing(padding-left, 100px);
+}
+
+.guide__inline-block-serial {
+    @include inline-block-serial(30%, middle);
+}
+
+.guide__multi-input-birthday {
+    @include multi-input-birthday;
+}
+
+.guide__placeholder {
+    @include placeholder($primary-link-color);
+}
+
+.guide__position-wrap-bl {
+    @include position-wrap-bl(0, -30px);
+}
+
+.guide__position-wrap-br {
+    @include position-wrap-br(0, -30px);
+}
+
+.guide__position-wrap-tl {
+    @include position-wrap-tl(0, -30px);
+}
+
+.guide__position-wrap-tr {
+    @include position-wrap-tr(0, -30px);
+}
+
+.guide__predefined-bordered-shadowed-box {
+    @include predefined-bordered-shadowed-box;
+}
+
+.guide__pseudo-helper {
+    &:before {
+        @include pseudo-helper;
+        background: $primary-link-color;
+        height: 30px;
+        width: 30px;
+    }
+}
+
+.guide__pseudo-in-flow {
+    &:before {
+        @include pseudo-in-flow(block);
+        background: $primary-link-color;
+        height: 30px;
+        width: 30px;
+    }
+}
+
+.guide__serial-spacing--margin-bottom {
+    @include serial-spacing(margin-bottom, 30px);
+}
+
+.guide__serial-spacing--padding-right {
+    @include serial-spacing(padding-right, 100px);
+}
+
+.guide__shadowed-box {
+    @include shadowed-box($box-shadow-medium, $silver, 10px);
+}
+
+.guide__table-cell-mid {
+    @include table-cell-mid;
+}
+
+.guide__table-cell-top {
+    @include table-cell-top;
+}
+
+.guide__word-wrap {
+    @include word-wrap;
+}
+
+.guide__z-app-tooltip {
+    @include z-app-tooltip(false);
+
+    // helper styles - grabbed from Web Carousel
+    &:before {
+        bottom: -8px;
+        left: 0;
+        margin: auto;
+        right: 0;
+    }
+    // end helper styles
+}
+
+.guide__z-border-top {
+    @include z-border-top(1px dashed $primary-link-color, 10px, 10px);
+}
+
+.guide__z-flexible-limited-container {
+    @include z-flexible-limited-container(800px);
+}
+.guide__z-form-select {
+    @include z-form-select;
+}
+
+.guide__z-interstitial {
+    @include z-interstitial($black, 14px, $silver, 40%);
+    text-align: center;
+}
+
+.guide__z-limited-container {
+    @include z-limited-container(500px);
+}
+
+.guide__z-notification-badge {
+    @include z-notification-badge(30px, 14px);
+    // helper styles - grabbed from Touch
+    color: white;
+    padding: 0.24em 0.4em;
+    // end helper styles
+}
+
+
+/*****************************************************************************
+    General styles for SVG visual guides
+*****************************************************************************/
+.guide__svg-collection {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+
+    p {
+        @include truncated-text;
+        margin: 10px 0;
+        word-break: break-all;
+    }
+
+    svg {
+        height: 100px;
+        width: 100px;
+    }
+
+    .svg-box {
+        background: #ccc;
+        font-family: sans-serif;
+        font-size: 11px;
+        line-height: 1.1;
+        margin: 1.5%;
+        padding: 30px;
+        text-align: center;
+        width: 130px;
+    }
+}
