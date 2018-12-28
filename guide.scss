@@ -1,0 +1,52 @@
+/*****************************************************************************
+
+    UI Visual Guides in Confluence
+
+    Helpers
+    https://c.zoosk.com/confluence/x/3CKu
+
+    Shortcuts
+    https://c.zoosk.com/confluence/x/1SKu
+
+    Utilities
+    https://c.zoosk.com/confluence/x/TCKu
+
+    SVG files (Zephyr)
+    https://c.zoosk.com/confluence/x/kCKu
+
+    SVG templates (Trove)
+    https://c.zoosk.com/confluence/x/NiOu
+
+    SVG templates (Touch)
+    https://c.zoosk.com/confluence/x/PSOu
+    
+*****************************************************************************/
+$platform: "web";
+$package: "guide";
+
+
+/*****************************************************************************
+    Main includes files containing compass imports, variables, and mixins
+*****************************************************************************/
+@import "shared/includes/imports";
+@import "shared/includes/compass-support";
+@import "shared/includes/variables";
+@import "shared/mixins/mixins";
+@import "shared/mixins/calc";
+
+
+/*****************************************************************************
+ Trove - Simplified pattern and component library!!
+*****************************************************************************/
+@import "trove/config/colors";
+@import "trove/config/border-radius";
+@import "trove/config/box-shadows";
+@import "trove/font-sizes/font-size-variables";
+@import "trove/helpers";
+@import "trove/shortcuts";
+@import "trove/utilities";
+
+@import "shared/patterns/dropdown-group";
+
+@import "shared/patterns/icon-font";
+@import "guide/guide";
