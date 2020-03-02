@@ -1,1 +1,340 @@
+/*****************************************************************************
+    General vars/mixins
+*****************************************************************************/
+/*****************************************************************************
+    Primary element styles
+*****************************************************************************/
+html {
+  font-size: 62.5%;
+}
 
+body {
+  color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.45;
+  margin: 0;
+  padding: 2rem;
+}
+
+.site-header > *:not(:first-child), section > *:not(:first-child), form > *:not(:first-child) {
+  margin-top: 2rem;
+}
+
+.site-header, section, footer {
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+}
+
+section:not(:first-child) {
+  border-top: 0.1rem solid #A9A9A9;
+}
+
+.site-content, footer {
+  border-top: 0.5rem solid #E0E0E0;
+}
+
+footer {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+li:not(:first-child) {
+  margin-top: 1rem;
+}
+
+a:link {
+  color: #025D8C;
+}
+a:visited {
+  color: #673ab7;
+}
+a:hover {
+  color: #a81304;
+}
+a:active {
+  color: #056269;
+}
+
+h1, h2, h3, ul, ol, input, fieldset {
+  margin: 0;
+}
+
+h1 {
+  color: #1a73e8;
+  font-size: 3.2rem;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+blockquote {
+  border-left: 0.5rem solid #E0E0E0;
+  font-size: 2rem;
+  padding: 0.8rem 2rem;
+}
+blockquote:not(:last-child) {
+  margin-bottom: 4rem;
+}
+.site-content blockquote {
+  margin-top: 4rem;
+}
+
+cite {
+  display: block;
+  font-size: 1.4rem;
+  margin-top: 1rem;
+}
+
+p, blockquote, pre {
+  margin-bottom: 0;
+}
+
+button, label {
+  cursor: pointer;
+}
+
+button {
+  background: #fff;
+  border: 0.2rem solid #FD8476;
+  border-radius: 0.4rem;
+  box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+  color: #FD8476;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+}
+button:hover {
+  background: #FD8476;
+  color: #fff;
+}
+button:active {
+  background: #fc2a11;
+}
+
+pre {
+  padding: 2rem;
+  background: #fff;
+  border-radius: 0.4rem;
+  white-space: pre-wrap;
+  width: 50rem;
+}
+pre:not(.pre--dark) {
+  border: 0.1rem solid #333;
+}
+
+.pre--dark {
+  background: #333;
+  color: #fff;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+}
+fieldset ul, fieldset li:not(:first-child) {
+  margin-top: 0.5rem;
+}
+
+label {
+  display: block;
+}
+
+.label-text {
+  line-height: 1.5;
+  margin-left: 0.8rem;
+}
+
+.input-field-label, legend {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+input:not([type=checkbox]):not([type=radio]) {
+  border: 0.1rem solid #333;
+  border-radius: 0.4rem;
+  display: block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+}
+
+/*****************************************************************************
+    Utility styles
+    These are good when you don't want to create a custom class just to
+    apply these properties.
+*****************************************************************************/
+.relative {
+  position: relative;
+}
+
+.middle-align {
+  vertical-align: middle;
+}
+
+.absolute-xy-centered {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+}
+
+.absolute-x-centered {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+.absolute-y-centered {
+  position: absolute;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+}
+
+.flexbox-site-default {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flexbox-column-spacing > *:not(first-child) {
+  margin-top: 2rem;
+}
+
+.flexbox-row-spacing > * {
+  margin-right: 2rem;
+}
+
+.flexbox-child-xy-centered {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+/*****************************************************************************
+    Element-specific classes/custom components    
+*****************************************************************************/
+.plain-list {
+  list-style: none;
+  padding: 0;
+}
+
+.floating-bubble {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background: rgba(51, 51, 51, 0.8);
+  border-radius: 0.4rem;
+  color: #fff;
+  font-size: 1.4rem;
+  opacity: 0;
+  padding: 1rem;
+  text-align: center;
+}
+
+/*****************************************************************************
+    Swatches
+*****************************************************************************/
+.swatches {
+  display: inline-flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.swatch {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 0.4rem;
+  box-sizing: border-box;
+  height: 7rem;
+  flex-direction: column;
+  font-size: 1.2rem;
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  width: 7rem;
+}
+.swatch__alert {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 6rem;
+}
+.swatch__value {
+  cursor: pointer;
+}
+.swatch__value:not(:first-child) {
+  margin-top: 0.3rem;
+}
+.swatch--khaki {
+  background: #CBB290;
+}
+.swatch--oatmeal {
+  background: #ECE3D4;
+}
+.swatch--vanilla {
+  background: #F4EAE1;
+}
+.swatch--peony {
+  background: #F5C2BA;
+}
+.swatch--coral {
+  background: #fdb5ae;
+}
+.swatch--apricot {
+  background: #FDB983;
+}
+.swatch--sun {
+  background: #FDD883;
+}
+.swatch--sage {
+  background: #C6CB90;
+}
+.swatch--denim {
+  background: #a5c5eb;
+}
+.swatch--lav {
+  background: #cac6ea;
+}
+.swatch--bugs {
+  background: #E0E0E0;
+}
+.swatch--pewter {
+  background: #A9A9A9;
+}
+
+/*****************************************************************************
+    Animations
+*****************************************************************************/
+.fade-in-out {
+  animation: opacity-0-1 500ms forwards, opacity-0-1 500ms 500ms reverse forwards;
+}
+
+@keyframes opacity-0-1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
