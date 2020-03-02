@@ -1,0 +1,312 @@
+<link type="text/css" href="https://raw.githubusercontent.com/sueannaj/gh-pages/master/codepen-styles.css" rel="stylesheet">
+
+<header class="site-header">
+    <h1>
+        Tooltips
+    </h1>
+    <p>These tooltips are built with mixins to allow for a high degree of customization. This pen, however, assumes the light source is coming from the same direction for all tooltips, so the drop shadow is the same. There are numerous mixins so that the arguments are more manageable.</p>
+</header>
+
+<main class="site-content">
+    <section>
+        <h2>Left-pointing tooltip</h2>
+        <form>
+            <label class="input-field-label">
+                Your full name
+                <input type="text">
+            </label>
+            <label class="input-field-label">
+                Phone Number
+                <input type="text">
+            </label>
+            <label class="input-field-label">
+                Your email address
+                <input type="email">
+            </label>
+            <fieldset>
+                <legend>Dining options</legend>
+                <ul class="plain-list">
+                    <li>
+                        <label class="flexbox-site-default">
+                            <input type="radio" name="dining-radio-option">
+                            <span class="label-text">Eat in</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="flexbox-site-default">
+                            <input type="radio" name="dining-radio-option">
+                            <span class="label-text">Take out</span>
+                        </label>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>Food options</legend>
+                <ul class="plain-list">
+                    <li>
+                        <!-- this flexbox thing works well in mobile -->
+                        <label class="flexbox-site-default">
+                            <input type="radio" name="radio-option">
+                            <span class="label-text">Vegetarian</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="flexbox-site-default">
+                            <input type="radio" name="radio-option">
+                            <span class="label-text">Vegan</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="flexbox-site-default">
+                            <input type="radio" name="radio-option">
+                            <span class="label-text">Fish only</span>
+                        </label>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <!-- is this how we label a set of options?? -->
+                <legend>Allergens</legend>
+                <ul class="plain-list">
+                    <li>
+                        <!-- this flexbox thing works well in mobile -->
+                        <label class="flexbox-site-default">
+                            <input type="checkbox" name="Gluten-option">
+                            <span class="label-text">Gluten</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="flexbox-site-default">
+                            <input type="checkbox" name="Dairy-option">
+                            <span class="label-text">Dairy</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="flexbox-site-default">
+                            <input type="checkbox" name="Soy-option">
+                            <span class="label-text">Soy</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="flexbox-site-default">
+                            <input type="checkbox" name="Nuts-option">
+                            <span class="label-text">Nuts</span>
+                        </label>
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+        <button>
+            Submit
+        </button>
+        <ul>
+            <li>
+                Some shit some shit
+            </li>
+            <li>
+                Some shit some shit
+            </li>
+            <li>
+                Some shit some shit
+            </li>
+        </ul>
+        <ol>
+            <li>
+                Some shit some shit
+            </li>
+            <li>
+                Some shit some shit
+            </li>
+            <li>
+                Some shit some shit
+            </li>
+        </ol>
+        <div class="flexbox-row-spacing flexbox-site-default">
+            <pre>
+.tooltip--info {
+    @include pointer-base-styles;
+    @include pointer-framing($pointer-size, left, middle, .1rem, solid $pewter);
+    @include tooltip-backgrounds(white);
+}</pre>
+            <pre class="pre--dark">
+.tooltip--info {
+    @include pointer-base-styles;
+    @include pointer-framing($pointer-size, left, middle, .1rem, solid $pewter);
+    @include tooltip-backgrounds(white);
+}</pre>
+        </div><!--flexbox-site-default-->
+        <blockquote>
+            Setting one axis to visible (the default) while setting the other to a different value results in visible behaving as auto.
+            <cite>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow" target="_blank">
+                    https://developer.mozilla.org/en-US/docs/Web/CSS/overflow
+                </a>
+            </cite>
+        </blockquote>
+    </section>
+    <!-- --------------------
+    Right pointer
+    -------------------- -->
+    <section>
+        <h2>Right-pointing tooltip</h2>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        </p>
+        <blockquote>
+            Setting one axis to visible (the default) while setting the other to a different value results in visible behaving as auto.
+            <cite>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow" target="_blank">
+                    https://developer.mozilla.org/en-US/docs/Web/CSS/overflow
+                </a>
+            </cite>
+        </blockquote>
+        <p>
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+        </p>
+        <ul>
+            <li>
+                Some shit some shit
+            </li>
+            <li>
+                Some shit some shit
+            </li>
+            <li>
+                Some shit some shit
+            </li>
+        </ul>
+        <h3>
+            Why do we use it?
+        </h3>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        </p>
+    </section>
+    <!-- --------------------
+    Bottom pointer
+    -------------------- -->
+    <section>
+        <h2>Bottom-pointing tooltip</h2>
+        <pre>
+.tooltip--button-info {
+    @include pointer-base-styles;
+    @include pointer-framing($pointer-size, bottom, middle, .3rem, solid darken($denim, 12%));
+    @include tooltip-backgrounds($denim);
+    @include tooltip-framing(1em, .4rem, $tooltip-offset-shadow);
+    @include tooltip-position(-7.5rem, 0, false, 0);
+    @include tooltip-text(darken($denim, 50%), 1.5rem, 1.25);
+    text-align: center;
+    width: 90%;
+}</pre>
+    </section>
+    <!-- --------------------
+    Top pointer
+    -------------------- -->
+    <section>
+        <h2>Top-pointing tooltip</h2>
+        <p>Click on a var or hex value to copy it.</p>
+        <div class="swatches">
+            <div class="swatch--khaki swatch">
+                <div class="swatch__value" id="$khaki">
+                    $khaki
+                </div>
+                <div class="swatch__value" id="#CBB290">
+                    #CBB290
+                </div>
+            </div>
+            <div class="swatch--oatmeal swatch">
+                <div class="swatch__value" id="$oatmeal">
+                    $oatmeal
+                </div>
+                <div class="swatch__value" id="#ECE3D4">
+                    #ECE3D4
+                </div>
+            </div>
+            <div class="swatch--vanilla swatch">
+                <div class="swatch__value" id="$vanilla">
+                    $vanilla
+                </div>
+                <div class="swatch__value" id="#F4EAE1">
+                    #F4EAE1
+                </div>
+            </div>
+            <div class="swatch--peony swatch">
+                <div class="swatch__value" id="$peony">
+                    $peony
+                </div>
+                <div class="swatch__value" id="#F5C2BA">
+                    #F5C2BA
+                </div>
+            </div>
+            <div class="swatch--coral swatch">
+                <div class="swatch__value" id="$coral">
+                    $coral
+                </div>
+                <div class="swatch__value" id="#FDB5AE">
+                    #FDB5AE
+                </div>
+            </div>
+            <div class="swatch--apricot swatch">
+                <div class="swatch__value" id="$apricot">
+                    $apricot
+                </div>
+                <div class="swatch__value" id="#FDB983">
+                    #FDB983
+                </div>
+            </div>
+            <div class="swatch--sun swatch">
+                <div class="swatch__value" id="$sun">
+                    $sun
+                </div>
+                <div class="swatch__value" id="#FDD883">
+                    #FDD883
+                </div>
+            </div>
+            <div class="swatch--sage swatch">
+                <div class="swatch__value" id="$sage">
+                    $sage
+                </div>
+                <div class="swatch__value" id="#C6CB90">
+                    #C6CB90
+                </div>
+            </div>
+            <div class="swatch--denim swatch">
+                <div class="swatch__value" id="$denim">
+                    $denim
+                </div>
+                <div class="swatch__value" id="#AEC7E8">
+                    #AEC7E8
+                </div>
+            </div>
+            <div class="swatch--lav swatch">
+                <div class="swatch__value" id="$lav">
+                    $lav
+                </div>
+                <div class="swatch__value" id="#CAC6EA">
+                    #CAC6EA
+                </div>
+            </div>
+            <div class="swatch--bugs swatch">
+                <div class="swatch__value" id="$bugs">
+                    $bugs
+                </div>
+                <div class="swatch__value" id="#E0E0E0">
+                    #E0E0E0
+                </div>
+            </div>
+            <div class="swatch--pewter swatch">
+                <div class="swatch__value" id="$pewter">
+                    $pewter
+                </div>
+                <div class="swatch__value" id="#A9A9A9">
+                    #A9A9A9
+                </div>
+            </div>
+            <div id="swatchAlert" class="swatch__alert floating-bubble">
+                <span>Copied</span>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    This is a demo by Sue Anna Joe.
+</footer>
